@@ -1,6 +1,7 @@
 import MenuItem from './MenuItem'
 import { FaHome, FaInfoCircle } from "react-icons/fa";
 import Link from 'next/link';
+import DarkModeSwitch from './DarkModeSwitch';
 
 const Header = () => {
     return (
@@ -9,7 +10,8 @@ const Header = () => {
                 <MenuItem title="Home" address="/" Icon={<FaHome />} />
                 <MenuItem title="About" address="/about" Icon={<FaInfoCircle />} />
             </div>
-            <div className="">
+            <div className="flex items-center space-x-4">
+                <DarkModeSwitch />
                 <Link href={"/"}>
                     <h2 className='text-2xl'>
                         <span className='font-bold bg-amber-500 py-1 px-2 rounded-lg'>IMDB</span>
